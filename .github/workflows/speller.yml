@@ -17,9 +17,3 @@ jobs:
       - name: Проверка орфографии с помощью Yaspeller
         run: |
           npx yaspeller *.html
-  speller-pyspeller:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Проверка орфографии с помощью Pyspeller
-        uses: igsekor/pyspelling-any@v0.0.2
