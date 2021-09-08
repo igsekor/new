@@ -1,7 +1,7 @@
 matrix:
 - name: HTML
   sources:
-  - '*.html'
+    - '*.html'
   default_encoding: utf-8
   aspell:
     lang: 
@@ -9,12 +9,11 @@ matrix:
       - ru
   dictionary:
     wordlists:
-    - wordlist.txt
+      - wordlist.txt
     encoding: utf-8
   pipeline:
-  - pyspelling.filters.markdown:
-  - pyspelling.filters.html:
-      comments: false
-      ignores:
-      - code
-      - pre
+    - pyspelling.filters.html:
+        comments: true
+        ignores:
+          - code
+          - pre
